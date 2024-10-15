@@ -1,0 +1,304 @@
+.navbar {
+    justify-content: end;
+    position: fixed;
+}
+
+.navbar-menu {
+    height: fit-content !important;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+    justify-content: end;
+    padding: 0;
+}
+
+.navbar-menu a {
+    padding: 12px;
+}
+
+.navbar-content {
+    color: black;
+}
+
+.navbar-menu a:hover,
+.active-section {
+    background-color: rgb(120, 40, 200);
+    color: rgb(228, 227, 213);
+    border-radius: 24px;
+    transition: .5s ease-in-out;
+}
+
+.active-section {
+    color: rgb(228, 227, 213);
+}
+
+.portfolio-container {
+    margin-top: 72px;
+}
+
+.portfolio-container section:nth-child(even) {
+    background-color: rgb(228, 227, 213);
+}
+
+.about-me,
+.technical-skills,
+.soft-skills,
+.projects,
+.testimonials,
+.contact-me {
+    padding: 48px 72px;
+}
+
+.about-me {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-detail {
+    width: 60%;
+}
+
+.user-image {
+    width: 40%;
+    height: 300px;
+}
+
+.user-image img,
+.project-data-image img {
+    width: auto;
+    margin: auto;
+    object-fit: contain;
+    height: 100%;
+    border-radius: 24px;
+}
+
+.user-detail h1 {
+    padding-bottom: 12px;
+    letter-spacing: 1.5px;
+}
+
+.common-card {
+    width: 350px;
+    margin: 36px 12px;
+    padding-bottom: 24px;
+}
+
+.card-body {
+    height: 124px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: clip;
+    padding: 0 24px 0 12px;
+    margin-bottom: 12px;
+    align-self: center;
+    word-break: break-word;
+}
+
+.project-data>div:nth-child(n) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-data>div:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.project-data-image {
+    width: 20%;
+    height: 200px;
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.project-data>div,
+.project-data>h1 {
+    padding: 24px 48px;
+}
+
+.slide-left .project-data-image {
+    margin-left: 24px;
+}
+
+.slide-right .project-data-image {
+    margin-right: 24px;
+}
+
+.slide-left {
+    animation: slideInFromLeft 1s forwards;
+}
+
+.slide-right {
+    animation: slideInFromRight 1s forwards;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.quotes {
+    margin: 48px 12px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote>p {
+    text-align: center;
+    padding-bottom: 12px;
+}
+
+.quote cite {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+
+.contact-details {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 12px;
+}
+
+.contact-details div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    text-align: center;
+    width: 35%;
+}
+
+.contact-details div address {
+    font-weight: 600;
+    margin: 24px;
+}
+
+.footer {
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+}
+
+.footer svg {
+    margin: 12px 24px;
+}
+
+.footer a:hover svg g,
+.footer a:hover svg path {
+    fill: rgb(120, 40, 200);
+    transition: 0.1s ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+
+    .navbar-menu {
+        box-shadow: 4px 0px 8px 4px darkgray;
+    }
+
+    .about-me,
+    .technical-skills,
+    .soft-skills,
+    .projects,
+    .testimonials,
+    .contact-me {
+        padding: 12px;
+    }
+
+    .about-me {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .user-image {
+        width: 100%;
+        height: 300px;
+    }
+
+    .user-detail {
+        width: 100%;
+    }
+
+    .user-image,
+    .user-detail h1,
+    .user-detail p,
+    .data-chips {
+        text-align: center;
+        padding: 18px;
+    }
+
+    .card-body {
+        -webkit-box-orient: initial;
+        overflow: auto;
+    }
+
+    .project-data>div:nth-child(n) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-data>h1,
+    .project-details,
+    .project-data-image {
+        margin-top: 18px;
+        margin-left: 0px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .project-details p {
+        margin-top: 18px;
+    }
+
+    .slide-left .project-data-image,
+    .slide-right .project-data-image {
+        margin: 0;
+    }
+
+    .quotes {
+        height: 450px;
+    }
+
+    .contact-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-details>div {
+        width: 100%;
+    }
+
+    .footer {
+        justify-content: center;
+        align-items: center;
+    }
+}

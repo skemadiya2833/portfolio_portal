@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: '__Lora_242605';
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  h1 {
+    @apply text-4xl;
+    @apply font-bold;
+  }
+
+  h2 {
+    @apply text-3xl;
+    @apply font-bold;
+  }
+
+  h3 {
+    @apply text-2xl;
+    @apply font-bold;
+  }
+
+  h4 {
+    @apply text-xl;
+    @apply font-semibold;
+  }
+
+  h5 {
+    @apply text-lg;
+    @apply font-semibold;
+  }
+
+  h6 {
+    @apply text-sm;
+    @apply font-semibold;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  height: calc(100% - 50px);
+}
+
+#__next {
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(120, 40, 200);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(120, 40, 200);
+}
+
+.jodit-react-container {
+  margin: 12px;
+  padding: 10px;
+}
+
+.jodit-wysiwyg {
+  padding-left: 10px !important;
+}
+
+.jodit-wysiwyg ul {
+  list-style: inside !important;
+}
+
+.jodit-wysiwyg ol {
+  list-style: inside !important;
+  list-style-type: number !important;
+}
+
+@media screen and (max-width: 767px) {
+  .rec-arrow {
+    display: none;
+  }
+}

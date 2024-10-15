@@ -1,0 +1,214 @@
+.overlay {
+    background: rgba(228, 227, 213, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-main {
+    display: flex;
+    height: 100%;
+}
+
+.loader-container {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 100;
+    color: rgb(120, 40, 200);
+}
+
+.left-panel {
+    width: 20%;
+    border-right: 1px solid rgb(228 227 213);
+}
+
+.module,
+.activeModule {
+    padding: 24px;
+    border-bottom: 1px solid rgb(228 227 213);
+    cursor: pointer;
+}
+
+.activeModule {
+    background-color: rgb(120, 40, 200);
+    color: rgb(228 227 213);
+}
+
+.right-panel {
+    width: 80%;
+    flex-grow: 1;
+    padding: 24px 48px 0 48px;
+    overflow: auto;
+}
+
+.dashboard-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-form input,
+.dashboard-form textarea,
+.dashboard-form label,
+.dashboard-form h2,
+.submit-button,
+.modal-button {
+    padding: 10px;
+    margin: 12px;
+}
+
+.dashboard-form textarea {
+    resize: none;
+}
+
+.input-normal {
+    border-bottom: 1px solid rgb(228 227 213);
+    border-radius: 24px;
+}
+
+.input-normal:focus,
+.input-error:focus {
+    outline: none;
+}
+
+.input-error {
+    border-bottom: 1px solid red !important;
+    border-radius: 24px;
+}
+
+.submit-button,
+.modal-button {
+    background-color: rgb(120, 40, 200);
+    border-radius: 24px;
+    color: rgb(228 227 213);
+}
+
+.info-tooltip {
+    background-color: rgb(120, 40, 200);
+}
+
+.error-tooltip {
+    background-color: red;
+}
+
+.error-tooltip,
+.info-tooltip {
+    padding: 8px;
+    border-radius: 24px;
+    color: rgb(228 227 213);
+}
+
+.registered-modal {
+    background-color: green;
+    color: rgb(228 227 213);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.registered-modal {
+    background-color: rgb(228 227 213);
+    color: black;
+    border-radius: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.modal-body-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.modal-body-content p {
+    margin-top: 10px;
+}
+
+.login-page {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-page-image,
+.login-page-form {
+    width: 45%;
+}
+
+.data-chips {
+    height: 60px;
+    padding: 12px;
+    white-space: nowrap;
+    overflow: auto hidden;
+}
+
+.data-chip {
+    margin-right: 8px;
+}
+
+.data-chip span {
+    padding-right: 8px;
+    cursor: pointer;
+}
+
+.proficiency-slider div div {
+    border-left-color: rgb(120, 40, 200);
+}
+
+.proficiency-slider div div div {
+    background-color: rgb(120, 40, 200);
+}
+
+@media screen and (max-width: 767px) {
+
+    .dashboard-main {
+        flex-direction: column;
+    }
+
+    .left-panel {
+        border: none;
+        width: 100%;
+    }
+
+    .left-panel ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .module,
+    .activeModule {
+        margin: 8px;
+        border-bottom: none;
+        border-radius: 24px;
+        padding: 12px;
+        width: 150px;
+        background-color: rgb(228 227 213);
+    }
+
+    .activeModule {
+        background-color: rgb(120, 40, 200);
+        color: rgb(228 227 213);
+    }
+
+    .right-panel {
+        width: 100%;
+    }
+
+    .login-page {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .login-page-image,
+    .login-page-form {
+        height: 200px;
+        width: auto;
+    }
+
+    .login-page-image img {
+        height: 100%;
+        width: 100%;
+    }
+}
